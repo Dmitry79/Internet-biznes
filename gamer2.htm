@@ -1,0 +1,1236 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>gamer2</title>
+<style type="text/css">
+td {font-size: 95%}
+</style>
+</head>
+
+<body onload="inizal2()">
+<table border="2" id="table91" width="78%" height="54" align="left">
+<tr><td width="194" height="40">Игрок2<input type="text" id="name91" maxlength="7" size="7"></td>
+<td width="180" height="40">Счет2(10%)<input type="text" id="chet912" maxlength="8" size="8"></td>
+<td width="279" height="40">Hard Company<input type="text" id="hc91" maxlength="3" size="3"></td>
+<td><input align="left" type="button" value="Передать ход" id="peredal9" onclick="pered9()"></td></tr>
+
+<tr><td width="194" height="43">Счет в банке<input type="text" id="chet91" maxlength="8" size="8"></td>
+<td width="180" height="43">Счет3(140%)<input type="text" id="chet913" maxlength="7" size="7"></td>
+<td width="279" height="43">Railway Company<input type="text" id="rc91" maxlength="3" size="3"></td>
+<td><input type="button" value="Сделать ход" id="shod9" onclick="hod9()"><input align="left"  id="top91" type="radio" readonly></td>
+</tr>
+<tr><td width="194" height="55">Золото<input type="text" id="gold91" maxlength="2" size="2"></td>
+<td width="180" height="55">Счет4 (7%)<input type="text" id="chet914" maxlength="7" size="7"></td>
+<td width="279" height="55">Rest Company<input type="text" id="restcom91" maxlength="3" size="3"></td>
+<td width="194" height="41">Фишки<input type="text" id="fishki91" maxlength="8" size="8"></td>
+</tr>
+<tr><td width="194" height="48">Бензин<input type="text" id="oil91" maxlength="2" size="2"></td>
+<td width="180" height="48">Страховка<input type="text" id="str91" maxlength="2" size="2"></td>
+<td width="279" height="48">Serves Company<input type="text" id="scom91" maxlength="3" size="3"></td>
+<td width="180" height="41">Долг в банке<input type="text" id="dolg91" maxlength="4" size="4">
+Залог<input type="text" id="zalog91" maxlength="1" size="1">Pt</td>
+</tr>
+<tr><td width="194" height="45">Платина<input type="text" id="pt91" maxlength="2" size="2"></td>
+<td width="180" height="45">max<input type="text" id="str912" maxlength="2" size="2">
+ВЫ<input type="text" id="str913" maxlength="2" size="2"></td>
+<td width="279" height="45">Easy Company<input type="text" id="easycom9" maxlength="3" size="3"></td>
+<td width="279" colspan="2" height="41">Доход<input type="text" id="dohod91" maxlength="7" size="7"></td>
+</tr>
+</table>
+<input type="text" size="2" maxlength="2" id="kletka9"><br>
+<input type="text" size="25" maxlength="25" id="kletkaname9"><br>
+<table id="table912"><tr><td><input type="checkbox" id="cb911" value="1" readonly>1</td><td><input type="checkbox" id="cb912" readonly value="2">2</td><td><input type="checkbox" id="cb914" readonly value="4">4</td></tr>
+<tr><td><input type="checkbox" id="cb916" value="6" readonly>6</td><td><input type="checkbox" id="cb917" readonly value="7">7</td><td><input type="checkbox" id="cb919" readonly value="9">9</td></tr>
+<tr><td><input type="checkbox" id="cb9111" value="11" readonly>11</td><td><input type="checkbox" id="cb9113" value="13" readonly>13</td><td><input type="checkbox" id="cb9114" value="14" readonly>14</td></tr>
+<tr><td><input type="checkbox" id="cb9116" value="16" readonly>16</td><td><input type="checkbox" id="cb9117" value="17" readonly>17</td><td><input type="checkbox" id="cb9119" value="19" readonly>19</td></tr>
+<tr><td><input type="checkbox" id="cb9121" value="21" readonly>21</td><td><input type="checkbox" id="cb9123" value="23" readonly>23</td><td><input type="checkbox" id="cb9124" value="24" readonly>24</td></tr>
+<tr><td><input type="checkbox" id="cb9126" value="26" readonly>26</td><td><input type="checkbox" id="cb9128" value="28" readonly>28</td><td><input type="checkbox" id="cb9129" value="29" readonly>29</td></tr>
+<tr><td><input type="checkbox" id="cb9131" value="31" readonly>31</td><td><input type="checkbox" id="cb9132" value="32" readonly>32</td><td><input type="checkbox" id="cb9134" value="34" readonly>34</td></tr>
+<tr><td><input type="checkbox" id="cb9136" value="36" readonly>36</td><td><input type="checkbox" id="cb9138" value="38" readonly>38</td><td><input type="checkbox" id="cb9139" value="39" readonly>39</td></tr>
+</table>
+<script type="text/javascript" language="javascript">
+var i9,j9,going9,going912,x9,g;
+var perem9=0;
+var g1='gamer1';
+var g2='gamer2';
+var g3='bank';
+var zarplata=new Array(40)
+i9=0;
+j9=0;
+x93= new Boolean()
+x94=new Boolean()
+tt9=new Boolean(false)
+
+function inizal2()
+{
+window.peredal9.disabled=true;
+window.shod9.disabled=true;
+
+window.cb911.disabled=true;
+window.cb912.disabled=true;
+window.cb914.disabled=true;
+window.cb916.disabled=true;
+window.cb917.disabled=true;
+window.cb919.disabled=true;
+window.cb9111.disabled=true;
+window.cb9113.disabled=true;
+window.cb9114.disabled=true;
+window.cb9116.disabled=true;
+window.cb9117.disabled=true;
+window.cb9119.disabled=true;
+window.cb9121.disabled=true;
+window.cb9123.disabled=true;
+window.cb9124.disabled=true;
+window.cb9126.disabled=true;
+window.cb9128.disabled=true;
+window.cb9129.disabled=true;
+window.cb9131.disabled=true;
+window.cb9132.disabled=true;
+window.cb9134.disabled=true;
+window.cb9136.disabled=true;
+window.cb9138.disabled=true;
+window.cb9139.disabled=true;
+}
+function opl(g)
+{
+if(window.parent.parent.osnova3.kartochka.game[g]==pusto)
+{
+window.parent.parent.osnova3.kartochka.zarplata[g]=0;
+}
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.arenta[g];
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil1[g];
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil2[g];
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil3[g];
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse1[g]
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse2[g]
+else
+{
+if ((window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==false))
+
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse3[g]
+}
+}
+}
+}		
+}	
+}
+}
+return window.parent.parent.osnova3.kartochka.zarplata[g]
+}
+
+function alw9()
+{
+bb91=window.parent.parent.osnova3.kartochka.game[g];
+return bb91
+}
+x3=new Boolean()
+x4=new Boolean()
+tt=new Boolean(false)
+var pusto='Свободен';
+
+
+function pered9()
+{
+perem9=0;
+window.parent.parent.osnova3.biznes.knopka2.disabled=true;
+window.parent.parent.osnova3.biznes.knopka11.disabled=true;
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+if (window.name91.value=="")
+{
+alert('Нажмите кнопку начать игру');
+}
+else
+{
+
+if (window.shod9.disabled==true)
+{
+	if(window.parent.parent.osnova3.kartochka.rentauch999.value>=15)
+	{
+	window.peredal9.disabled=true;
+	}
+parent.gamer1.shod.disabled=false;
+parent.gamer1.peredal.disabled=true;
+
+parent.gamer1.table1.bgColor="#CCFFFF";
+parent.gamer1.top1.checked=true;
+window.top91.checked=false;
+window.table91.bgColor="white";
+window.peredal9.disabled=true;
+
+}
+else
+{
+window.shod9.disabled=true;
+}
+}
+}
+function hodrandom9()
+{
+var x91,x92,x93;
+tt9=false;
+
+x91=Math.ceil(6*Math.random());
+x92=Math.ceil(6*Math.random());
+if((x91!=x92)&&(window.parent.parent.osnova3.kartochka.rentauch999.value==15)&&(window.kletka9.value==10))
+{
+alert('ВЫ ДОЛЖНЫ ЗАПЛАТИТЬ 15 у.е.');
+						if((parseInt(window.chet91.value,10))>=((parseInt(window.parent.parent.osnova3.kartochka.rentauch999.value,10))))
+						{
+						window.chet91.value=parseInt((window.chet91.value),10)-parseInt((window.parent.parent.osnova3.kartochka.rentauch999.value),10);
+						window.parent.parent.osnova3.kartochka.rentauch999.value=0;
+						alert('ДОЛГ БАНКУ ОПЛАЧЕН');
+						}
+							else 
+							{
+							alert('Вам необходимо добыть деньги!');
+							window.peredal9.disabled=true;
+							window.shod9.disabled=true;
+							window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+							tt9=true;
+							return tt9;
+							}
+}
+
+else if((x91!=x92)&&(window.parent.parent.osnova3.kartochka.rentauch999.value != 0)
+&&(window.kletka9.value==10)&&(window.parent.parent.osnova3.kartochka.rentauch999.value != 15))
+{
+window.parent.parent.osnova3.kartochka.rentauch999.value = 
+parseInt(window.parent.parent.osnova3.kartochka.rentauch999.value)+5;
+tt=true;
+window.shod9.disabled=true;
+parent.gamer1.peredal.disabled=true;
+window.peredal9.disabled=false;
+parent.gamer1.shod.disabled=true;
+return tt9
+}
+else if ((x91==x92)||((x91==x92)&&(window.parent.parent.osnova3.kartochka.rentauch999.value != 0)))
+{
+	if(window.kletka9.value==10)
+		{
+		window.parent.parent.osnova3.kartochka.rentauch999.value = 0;
+		alert('Бесплатный выход с биржи');
+		}
+while((x91==x92) && (perem9<=2))
+	{
+perem9=perem9+1;
+if (perem9==3)
+		{
+perem9=0;
+going912=0;
+tt9=true;
+window.shod9.disabled=true;
+parent.gamer1.peredal.disabled=true;
+parent.gamer1.shod.disabled=true;
+window.peredal9.disabled=false;
+alert('Отправляйтесь на биржу, у Вас три дубля подряд');
+window.parent.parent.osnova3.kartochka.rentauch999.value = 5;
+	if(parseInt(window.str91.value)!==0)
+	{
+	window.str913.value=parseInt((window.str913.value),10) + 1;
+	var ost9=parseInt((ost9),10);
+	ost9=parseInt((window.str912.value),10)-parseInt((window.str913.value),10);
+		if(ost9!==0)
+		{
+		alert('До получения страховки Вам осталось '+ ost9 +' раз прийти на биржу');
+		}
+		else
+		{
+			if(parseInt(window.str912.value)==3)
+			{
+			var strpribly93=parseInt(window.str91.value)*5;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly93 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly93;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+			if(parseInt(window.str912.value)==20)
+			{
+			var strpribly920=parseInt(window.str91.value)*50;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly920 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly920;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+			if((parseInt(window.str912.value)!==3)
+			&&(parseInt(window.str912.value)!==20)
+			&&(parseInt(window.str912.value)!==0))
+			{
+			var strpribly93_20=parseInt(window.str91.value)*parseInt(window.str912.value)*2;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly93_20 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly93_20;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+		}
+	}
+return tt9
+break;
+		}
+parent.gamer1.peredal.disabled=true;
+parent.gamer1.shod.disabled=true;
+window.peredal9.disabled=true;
+going912=x91+x92;
+alert('У ВАС ДУБЛЬ!!! Сумма хода брошенных костей составила ' + going912 + ' клеток');
+return going912
+	}
+}
+else if((x91!=x92)&&(window.parent.parent.osnova3.kartochka.rentauch999.value != 15))
+{
+going912=x91+x92;
+
+window.shod9.disabled=true;
+parent.gamer1.peredal.disabled=true;
+window.peredal9.disabled=false;
+parent.gamer1.shod.disabled=true;
+return going912
+}
+}
+
+var x9=y9=0;
+var ch91,ch911,ch92;
+var koff9=3;
+function hod9()
+{
+window.parent.parent.osnova3.biznes.knopka2.disabled=false;
+window.parent.parent.osnova3.biznes.knopka3.disabled=false;
+if((window.pt91.disabled==false)&&(window.gold91.disabled==false))
+{
+window.dohod91.value=parseInt(((window.chet91.value)*0.005 +20),10)
++parseInt((window.chet914.value)*0.07,10)
++parseInt((window.chet912.value)*0.1,10)
++parseInt((window.gold91.value)*5,10)
++parseInt((window.oil91.value)*10,10)
++parseInt((window.pt91.value)*20,10)
+-parseInt((window.dolg91.value)*0.05,10);
+}
+if((window.pt91.disabled==false)&&(window.gold91.disabled==true))
+{
+window.dohod91.value=parseInt(((window.chet91.value)*0.005 +20),10)
++parseInt((window.chet914.value)*0.07,10)
++parseInt((window.chet912.value)*0.1,10)
++parseInt((window.oil91.value)*10,10)
++parseInt((window.pt91.value)*20,10)
+-parseInt((window.dolg91.value)*0.05,10);
+}
+if((window.pt91.disabled==true)&&(window.gold91.disabled==false))
+{
+window.dohod91.value=parseInt(((window.chet91.value)*0.005 +20),10)
++parseInt((window.chet914.value)*0.07,10)
++parseInt((window.chet912.value)*0.1,10)
++parseInt((window.gold91.value)*5,10)
++parseInt((window.oil91.value)*10,10)
+-parseInt((window.dolg91.value)*0.05,10);
+}
+if((window.pt91.disabled==true)&&(window.gold91.disabled==true))
+{
+window.dohod91.value=parseInt(((window.chet91.value)*0.005 +20),10)
++parseInt((window.chet914.value)*0.07,10)
++parseInt((window.chet912.value)*0.1,10)
++parseInt((window.oil91.value)*10,10)
+-parseInt((window.dolg91.value)*0.05,10);
+}
+
+if (window.top91.checked==true)
+	{
+hodrandom9()
+if (tt9)
+{
+alert('Если выпадет дубль, то можете выйти с биржи бесплатно. '+ "\n" +
+ 'Всего 3 попытки. Долг перед биржей будет расти');
+window.kletka9.value=10;
+x9=10;
+window.kletkaname9.value=window.parent.parent.osnova3.kartochka.names[x9];
+}
+else
+{
+/*alert(window.parent.parent.osnova3.kartochka.names[x].value);*/
+	x9=parseInt(x9,10)+parseInt(going912,10);
+	window.kletka9.value=x9;
+	window.parent.parent.osnova3.kartochka.number[x9]=window.kletka9.value
+	window.kletkaname9.value=window.parent.parent.osnova3.kartochka.names[x9];
+		if (x9>=40)
+		{
+			if(parseInt(window.chet913.value)>0)
+			{
+					koff9=koff9-1;
+					if(koff9<=0)
+					{
+					window.chet91.value=parseInt((window.chet91.value),10)+parseInt((window.chet913.value),10)*1.4;
+					alert("Вы получили прибль с счета 140% равную " + parseInt((window.chet913.value),10)*1.4 + " у.е");
+					window.chet913.value=0;
+					}
+			}
+			if(parseInt(window.chet913.value)==0)
+			{
+			koff9=3;
+			}
+			ch91=window.chet91.value
+				if((window.gold91.disabled==true)&&(window.pt91.disabled==false))
+				{
+				ch91=parseInt(ch91,10)+parseInt(ch91*0.005,10)+20
+				+parseInt((window.chet914.value)*0.07,10)
+				+parseInt((window.chet912.value)*0.1,10)
+				+parseInt((window.oil91.value)*10,10)
+				+parseInt((window.pt91.value)*20,10);
+				window.chet91.value=ch91.toString()
+					if(parseInt(window.dolg91.value)>0)
+					{
+					window.dolg91.value=
+					parseInt(window.dolg91.value)-parseInt((parseInt(window.dolg91.value)*0.05),10);
+					}
+				}
+					else if((window.pt91.disabled==true)&&(window.gold91.disabled==false))
+					{
+					ch91=parseInt(ch91,10)+parseInt(ch91*0.005,10)+20
+					+parseInt((window.chet914.value)*0.07,10)
+					+parseInt((window.chet912.value)*0.1,10)
+					+parseInt((window.gold91.value)*5,10)
+					+parseInt((window.oil91.value)*10,10)
+					-parseInt((window.dolg91.value)*0.05,10);
+					window.chet91.value=ch91.toString()
+						if(parseInt(window.dolg91.value)>0)
+						{
+						window.dolg91.value=
+						parseInt(window.dolg91.value)-parseInt((parseInt(window.dolg91.value)*0.05),10);
+						}
+					}
+						else if((window.gold91.disabled==true)&&(window.pt91.disabled==true))
+						{
+						ch91=parseInt(ch91,10)+parseInt(ch91*0.005,10)+20
+						+parseInt((window.chet914.value)*0.07,10)
+						+parseInt((window.chet912.value)*0.1,10)
+						+parseInt((window.oil91.value)*10,10)
+						-parseInt((window.dolg91.value)*0.05,10);
+						window.chet91.value=ch91.toString()
+							if(parseInt(window.dolg91.value)>0)
+							{
+							window.dolg91.value=
+							parseInt(window.dolg91.value)-parseInt((parseInt(window.dolg91.value)*0.05),10);
+							}
+						}
+							else if((window.gold91.disabled==false)&&(window.pt91.disabled==false))
+							{
+							ch91=parseInt(ch91,10)+parseInt(ch91*0.005,10)+20
+							+parseInt((window.chet914.value)*0.07,10)
+							+parseInt((window.chet912.value)*0.1,10)
+							+parseInt((window.gold91.value)*5,10)
+							+parseInt((window.oil91.value)*10,10)
+							+parseInt((window.pt91.value)*20,10)
+							-parseInt((window.dolg91.value)*0.05,10);
+							window.chet91.value=ch91.toString()
+								if(parseInt(window.dolg91.value)>0)
+								{
+								var d91=parseInt((window.dolg91.value)*0.05,10);
+								window.dolg91.value=
+								parseInt(window.dolg91.value)-d91;
+								}
+							}
+
+			x9-=40;
+		}
+	window.kletkaname9.value=window.parent.parent.osnova3.kartochka.names[x9];
+	window.kletka9.value=x9;
+	g=window.kletka9.value;
+		if(g==15)
+		{
+		g=Math.floor(40*Math.random());
+		window.kletkaname9.value=window.parent.parent.osnova3.kartochka.names[g];
+		alert("ВЫ ПОПАЛИ НА СЮРПРИЗ И ПЕРЕШЛИ НА КЛЕТКУ " + window.kletkaname9.value);
+		window.kletka9.value=window.parent.parent.osnova3.kartochka.number[g];
+		x9=window.kletka9.value;
+			if(g<15)
+			{
+			window.chet91.value=parseInt(window.chet91.value,10)+20;
+			alert("ВЫ ПРОШЛИ СТАРТ И ПОЛУЧИЛИ 20 у.е.");
+			}
+		}
+		if(g==35)
+		{
+		g=Math.floor(40*Math.random());
+		window.kletkaname9.value=window.parent.parent.osnova3.kartochka.names[g];
+		alert("ВЫ ПОПАЛИ НА СЮРПРИЗ И ПЕРЕШЛИ НА КЛЕТКУ " + window.kletkaname9.value);
+		window.kletka9.value=window.parent.parent.osnova3.kartochka.number[g];
+		x9=window.kletka9.value;
+			if(g<35)
+			{
+			window.chet91.value=parseInt(window.chet91.value,10)+20;
+			alert("ВЫ ПРОШЛИ СТАРТ И ПОЛУЧИЛИ 20 у.е.");
+			}
+		}
+switch (parseInt(window.parent.parent.osnova3.kartochka.number[g]))
+{
+case 3: 
+prible9=Math.ceil(25*Math.random());
+alert('ВАША ПРИБЫЛЬ СОСТАВИЛА '+ prible9 + ' у.е');
+window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)
+break;
+case 5:
+
+alert("Прибль с бензина. 1 литр - 40 у.е.");
+var benplus9=parseInt(window.oil91.value)*40;
+window.chet91.value=parseInt(window.chet91.value,10)+parseInt((benplus9),10);
+break;
+
+case 6: case 7: case 9:
+
+	if(window.parent.parent.osnova3.kartochka.game[g]==g2)
+	{
+		if(confirm('ВЫ БУДИТЕ ДОБЫВАТЬ НЕФТЬ ЗА 15 у.е. ?'))
+		{
+			if(parseInt(window.chet91.value,10)>=15)
+			{
+			prible9=Math.ceil(45*Math.random());
+			alert('ВАША ПРИБЫЛЬ СОСТАВИЛА '+ prible9 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-15;
+			}
+			else
+			{
+			alert('У ВАС НЕТ 15 у.е.');
+			}
+		}
+		else
+		{
+		alert('ОТКАЗ');
+		}
+	}
+	else
+	{
+	alert('УЧАСТОК НА КОТОРОМ МОЖНО КОПАТЬ НЕФТЬ ВАМ НЕ ПРИНАДЛЕЖИТ');
+	}
+
+break;
+
+case 8:
+
+alert("Прибль с золота и платины." +'\n'+ "1 золотой - 25 у.е.; 1 платина - 80 у.е.");
+	if(window.gold91.disabled==false)
+	{
+	var dragplusgold9=parseInt(window.gold91.value)*25;
+	window.chet91.value=parseInt(window.chet91.value,10)+parseInt((dragplusgold9),10);
+	}
+	else
+	{
+	alert("ЗОЛОТО В ЛОМБАРДЕ");
+	}
+		if (window.pt91.disabled==false)
+		{
+		var dragpluspt9=parseInt(window.pt91.value)*80;
+		window.chet91.value=parseInt(window.chet91.value,10)+parseInt((dragpluspt9),10);
+		}
+		else
+		{
+		alert("ПЛАТИНА В ЛОМБАРДЕ");
+		}
+break;
+
+case 10:
+
+	if(parseInt(window.str91.value)!==0)
+	{
+	window.str913.value=parseInt((window.str913.value),10) + 1;
+	var ost9=parseInt((ost9),10);
+	ost9=parseInt((window.str912.value),10)-parseInt((window.str913.value),10);
+		if(ost9!==0)
+		{
+		alert('До получения страховки Вам осталось '+ ost9 +' раз прийти на биржу');
+		}
+		else
+		{
+			if((parseInt(window.str912.value)!==3)
+			&&(parseInt(window.str912.value)!==20)
+			&&(parseInt(window.str912.value)!==0))
+			{
+			var strpribly93_20=parseInt(window.str91.value)*parseInt(window.str912.value)*2;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly93_20 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly93_20;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+			if(parseInt(window.str912.value)==3)
+			{
+			var strpribly93=parseInt(window.str91.value)*5;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly93 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly93;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+			if(parseInt(window.str912.value)==20)
+			{
+			var strpribly920=parseInt(window.str91.value)*50;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly920 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly920;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+		}
+	}
+
+break;
+case 12:
+
+var nalog9=Math.ceil(20*Math.random());
+alert("С ВАС ШТРАФ "+ nalog9 + " у.е");
+	if((parseInt((nalog9),10))>(parseInt(window.chet91.value,10)))
+	{
+window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(nalog9,10);
+alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
+window.peredal9.disabled=true;
+/*window.parent.parent.osnova3.kartochka.rentauch.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);*/
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+	}
+	else
+	{
+	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((nalog9),10);
+	}
+break;
+
+case 16: case 17: case 19:
+
+	if(window.parent.parent.osnova3.kartochka.game[g]==g2)
+	{
+		if(confirm('ВЫ БУДИТЕ ДОБЫВАТЬ НЕФТЬ ЗА 20 у.е. ?'))
+		{
+			if(parseInt(window.chet91.value,10)>=20)
+			{
+			prible9=Math.ceil(50*Math.random());
+			alert('ВАША ПРИБЫЛЬ СОСТАВИЛА '+ prible9 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-20;
+			}
+			else
+			{
+			alert('У ВАС НЕТ 20 у.е.');
+			}
+		}
+		else
+		{
+		alert('ОТКАЗ');
+		}
+	}
+	else
+	{
+	alert('УЧАСТОК НА КОТОРОМ МОЖНО КОПАТЬ НЕФТЬ ВАМ НЕ ПРИНАДЛЕЖИТ');
+	}
+
+break;
+
+case 18:
+
+alert("ВЫ Должны заплатить НАЛОГ за хранение бензина." +'\n' + "1 литр - 25 у.е");
+var ben9=parseInt(window.oil91.value)*25;
+	if((parseInt((ben9),10))>(parseInt(window.chet91.value,10)))
+	{
+window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(ben9,10);
+alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
+window.peredal9.disabled=true;
+/*window.parent.parent.osnova3.kartochka.rentauch.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);*/
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+	}
+	else
+	{
+	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((ben9),10);
+	}
+break;
+
+case 20:
+
+window.fishki91.value=Math.round(parseInt(window.fishki91.value)*1.25);
+window.fishki91.value=parseInt(window.fishki91.value) + 50;
+alert("ВЫ НА ОТДЫХЕ! ПОЛУЧИТЕ ПРИЗОВЫЕ 50 ФИШЕК");
+window.parent.parent.osnova3.biznes.knopka11.disabled=false;
+break;
+
+case 22:
+
+var reket9=Math.round(parseInt(window.chet91.value)*0.05);
+window.chet91.value=parseInt(window.chet91.value)-Math.round(parseInt(window.chet91.value)*0.05);
+alert("Рэкет отнял у Вас "+ reket9 + " у.е.");
+break;
+
+case 25:
+
+	if(window.pt91.disabled==false)
+	{
+	alert("Прибль с платины." +'\n'+ "1 платина - 80 у.е.");
+	var platina9=parseInt(window.pt91.value)*80;
+	window.chet91.value=parseInt(window.chet91.value,10)+parseInt((platina9),10);
+	}
+	else
+	{
+	alert("ПЛАТИНА В ЛОМБАРДЕ");
+	}
+break;
+
+case 26: case 28: case 29:
+
+	if(window.parent.parent.osnova3.kartochka.game[g]==g2)
+	{
+		if(confirm('ВЫ БУДИТЕ ДОБЫВАТЬ НЕФТЬ ЗА 20 у.е. ?'))
+		{
+			if(parseInt(window.chet91.value,10)>=20)
+			{
+			prible9=Math.ceil(50*Math.random());
+			alert('ВАША ПРИБЫЛЬ СОСТАВИЛА '+ prible9 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-20;
+			}
+			else
+			{
+			alert('У ВАС НЕТ 20 у.е.');
+			}
+		}
+		else
+		{
+		alert('ОТКАЗ');
+		}
+	}
+	else
+	{
+	alert('УЧАСТОК НА КОТОРОМ МОЖНО КОПАТЬ НЕФТЬ ВАМ НЕ ПРИНАДЛЕЖИТ');
+	}
+
+break;
+
+case 27:
+
+alert("ВЫ Должны заплатить НАЛОГ за хранение золота и платины." +'\n' + "1 золотой - 15 у.е; 1 платина - 45 у.е");
+if((window.pt91.disabled==true)&&(window.gold91.disabled==false))
+{
+alert("ПЛАТИНА В ЛОМБАРДЕ. НАЛОГ ЗА НЕЁ НЕ ПЛАТИТСЯ");
+var draggold9=parseInt(window.gold91.value)*15;
+	if((parseInt((draggold9),10))>(parseInt(window.chet91.value,10)))
+	{
+window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(draggold9,10);
+alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
+window.peredal9.disabled=true;
+/*window.parent.parent.osnova3.kartochka.rentauch.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);*/
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+break;
+	}
+	else
+	{
+	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((draggold9),10);
+	break;
+	}
+
+}
+else if((window.gold91.disabled==true)&&(window.pt91.disabled==false))
+{
+alert("ЗОЛОТО В ЛОМБАРДЕ. НАЛОГ ЗА НЕГО НЕ ПЛАТИТСЯ");
+var dragpt9=parseInt(window.pt91.value)*45;
+var ch91=parseInt((window.chet91.value),10)
+	if((parseInt((dragp9t),10))>(ch91))
+	{
+window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(dragpt9,10);
+alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
+window.peredal9.disabled=true;
+/*window.parent.parent.osnova3.kartochka.rentauch.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);*/
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+	}
+	else
+	{
+	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((dragpt9),10);
+	break;
+	}
+}
+else if((window.gold91.disabled==true)&&(window.pt91.disabled==true))
+{
+alert("ЗОЛОТО И ПЛАТИНА В ЛОМБАРДЕ. НАЛОГ ЗА НИХ НЕ ПЛАТИТСЯ");
+break;
+}
+else if((window.gold91.disabled==false)&&(window.pt91.disabled==false))
+{
+var drag=parseInt(window.gold91.value)*15+parseInt(window.pt91.value)*45;
+	if((parseInt((drag9),10))>(parseInt(window.chet91.value,10)))
+	{
+window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(drag9,10);
+alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
+window.peredal9.disabled=true;
+/*window.parent.parent.osnova3.kartochka.rentauch.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);*/
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+break;
+	}
+	else
+	{
+	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((drag9),10);
+	break;
+	}
+}
+else
+break;
+
+case 30:
+
+alert("ВЫ ПРИШЛИ НА КЛЕТКУ 'БИЗНЕСМЕН'. "+"\n"+'ОТПРАВЛЯЙТЕСЬ НА БИРЖУ');
+window.parent.parent.osnova3.kartochka.rentauch999.value = 5;
+window.kletka9.value=10;
+x9=10;
+window.kletkaname9.value=window.parent.parent.osnova3.kartochka.names[x9];
+	if(parseInt(window.str91.value)!==0)
+	{
+	window.str913.value=parseInt((window.str913.value),10) + 1;
+	var ost9=parseInt((ost9),10);
+	ost9=parseInt((window.str912.value),10)-parseInt((window.str913.value),10);
+		if(ost9!==0)
+		{
+		alert('До получения страховки Вам осталось '+ ost9 +' раз прийти на биржу');
+		}
+		else
+		{
+			if(parseInt(window.str912.value)==3)
+			{
+			var strpribly93=parseInt(window.str91.value)*5;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly93 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly93;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+			if(parseInt(window.str912.value)==20)
+			{
+			var strpribly920=parseInt(window.str91.value)*50;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly920 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly920;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+			if((parseInt(window.str912.value)!==3)
+			&&(parseInt(window.str912.value)!==20)
+			&&(parseInt(window.str912.value)!==0))
+			{
+			var strpribly93_20=parseInt(window.str91.value)*parseInt(window.str912.value)*2;
+			alert('Страховой случай настал. Ваша прибль составила '+ strpribly93_20 + ' у.е');
+			window.chet91.value=parseInt(window.chet91.value)+strpribly93_20;
+			window.str91.value=0;
+			window.str912.value=0;
+			window.str913.value=0;
+			}
+		}
+	}
+
+break;
+
+case 33:
+	if(confirm('ВЫ БУДИТЕ УЧАВСТВОВАТЬ В РОЗЫГРЫШЕ ПЛАТИНЫ ЗА 50 у.е. ?'))
+	{
+		if(parseInt(window.chet91.value,10)>=50)
+		{
+		prible=Math.ceil(150*Math.random());
+		alert('ВАША ПРИБЫЛЬ СОСТАВИЛА '+ prible + ' у.е');
+			if(prible>129)
+			{
+			if(window.pt91.disabled==false)
+			{
+				if(confirm('ВЫ СОГЛАСНЫ ПОЛУЧИТЬ ПЛАТИНУ ВМЕСТО ДЕНЕГ ?'))
+				{
+					if((parseInt(window.parent.gamer1.pt1.value)+parseInt(window.pt91.value))<15)
+					{
+					window.pt91.value=parseInt(window.pt91.value)+1;
+					window.chet91.value=parseInt(window.chet91.value,10)-50;
+					}
+					else
+					{
+					alert("МАКСИМАЛЬНОЕ ЧИСЛО ПЛАТИН В ИГРЕ ДОСТИГНУТО! ВЫ ПОЛУЧИТЕ ДЕНЬГИ");
+					window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible,10)-50;
+					}
+				}
+				else
+				{
+				window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible,10)-50;
+				}
+			}
+			else {alert("У ВАС ПЛАТИНА В ЛОМБАРДЕ. ВЫ МОЖЕТЕ ВЗЯТЬ ТОЛЬКО ДЕНЬГИ.");}
+			}
+			else
+			{
+			window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible,10)-50;
+			}
+		}
+		else
+		{
+		alert("У ВАС НЕТ 50 у.е.");
+		}
+	}
+	else
+	{
+	alert('ОТКАЗ');
+	}
+break;
+
+case 36: case 38: case 39:
+
+if(window.parent.parent.osnova3.kartochka.game[g]==g2)
+{					
+	if(confirm('ВЫ БУДИТЕ ДОБЫВАТЬ НЕФТЬ ЗА 30 у.е. ?'))
+	{
+		if(parseInt(window.chet91.value,10)>=30)
+		{
+		prible9=Math.ceil(65*Math.random());
+		alert('ВАША ПРИБЫЛЬ СОСТАВИЛА '+ prible9 + ' у.е');
+		if(prible9>50)
+		{
+				if(confirm('ВЫ СОГЛАСНЫ ПОЛУЧИТЬ БЕНЗИН ВМЕСТО 51 у.е ПЛЮС ОСТАТОК ДЕНЕГ ?'))
+				{
+					if((parseInt(window.parent.gamer1.oil1.value)+parseInt(window.oil91.value))<15)
+					{
+					window.oil91.value=parseInt(window.oil91.value)+1;
+					window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-51;
+					}
+					else
+					{
+					alert("МАКСИМАЛЬНОЕ ЧИСЛО БЕНЗИНА В ИГРЕ ДОСТИГНУТО! ВЫ ПОЛУЧИТЕ ДЕНЬГИ");
+					window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-30;
+					}
+				}
+				else
+				{
+				window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-30;
+				}
+		}
+		else
+		{
+		window.chet91.value=parseInt(window.chet91.value,10)+parseInt(prible9,10)-30;
+		}
+		}
+		else
+		{
+		alert("У ВАС НЕТ 30 у.е.");
+		}
+	}
+	else
+	{
+	alert('ОТКАЗ');
+	}
+}
+
+break;
+
+case 37:
+
+if(window.gold91.disabled==false)
+{
+alert("ВЫ Должны заплатить НАЛОГ за хранение золота." +'\n' + "1 золотой - 15 у.е");
+var zol9=parseInt(window.gold91.value)*15;
+	if((zol9)>(parseInt(window.chet91.value,10)))
+	{
+window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(zol9,10);
+alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
+window.peredal9.disabled=true;
+/*window.parent.parent.osnova3.kartochka.rentauch.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);*/
+window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+	}
+	else
+	{
+	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((zol9),10);
+	}
+}
+else {
+alert("ЗОЛОТО В ЛОМБАРДЕ. НАЛОГ НЕ ПЛАТИТСЯ.");
+break;
+}
+
+}
+
+
+if((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+&&(window.parent.parent.osnova3.kartochka.game[g]==g3))
+{
+if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+{
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.arenta[g]
+}
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+{
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil1[g]
+}
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+{
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil2[g]
+}
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+{
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil3[g]
+}
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+{
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse1[g]
+}		
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+{
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse2[g]
+}		
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g3))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==false))
+
+{
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse3[g]
+}			
+
+						alert('ВЫ ДОЛЖНЫ ЗАПЛАТИТЬ ' + window.parent.parent.osnova3.kartochka.zarplata[g] + ' у.е.');
+						if(((window.chet91.value))>=((window.parent.parent.osnova3.kartochka.zarplata[g])))
+						{
+						window.chet91.value=
+						parseInt((window.chet91.value),10)-parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);
+						window.parent.parent.osnova3.biznes.knopka17.disabled=true;
+						 }
+							else {alert('Вам необходимо добыть деньги!');
+							window.peredal9.disabled=true;
+							window.parent.parent.osnova3.kartochka.rentauch999.value=
+							parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);
+							window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+
+						}
+						}
+						else if((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+&&(window.parent.parent.osnova3.kartochka.game[g]==g1))
+						{
+if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.arenta[g];
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil1[g];
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil2[g];
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plfil3[g];
+
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==true)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse1[g];
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==true))
+
+
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse2[g];
+else if (((window.parent.parent.osnova3.kartochka.game[g]!=pusto)
+||(window.parent.parent.osnova3.kartochka.game[g]==g1))
+&&(window.parent.parent.osnova3.kartochka.fillogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.fillogic3[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic2[g]==false)
+&&(window.parent.parent.osnova3.kartochka.houselogic3[g]==false))
+
+{
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.plhouse3[g];
+
+}
+						alert('ВЫ ДОЛЖНЫ ЗАПЛАТИТЬ ' + window.parent.parent.osnova3.kartochka.zarplata[g] + ' у.е.');
+						if(((window.chet91.value)>=(window.parent.parent.osnova3.kartochka.zarplata[g])))
+						{ 
+						window.chet91.value=
+						parseInt((window.chet91.value),10)-parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);
+						window.parent.gamer1.chet1.value=
+						parseInt((window.parent.gamer1.chet1.value),10)+parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);
+						window.parent.parent.osnova3.biznes.knopka17.disabled=true;
+						 }
+							else {alert('Вам необходимо добыть деньги!');
+							window.peredal9.disabled=true;
+							window.parent.parent.osnova3.kartochka.rentauch99.value=parseInt((window.parent.parent.osnova3.kartochka.zarplata[g]),10);
+							window.parent.parent.osnova3.biznes.knopka17.disabled=false;
+}
+						}
+else if(window.parent.parent.osnova3.kartochka.game[g]==pusto)
+{
+window.parent.parent.osnova3.kartochka.zarplata[g]=window.parent.parent.osnova3.kartochka.price[g];
+if(confirm("ВЫ БУДЕТЕ ПОКУПАТЬ УЧАСТОК ЗА " + window.parent.parent.osnova3.kartochka.zarplata[g] +" у.е ?"))
+{
+window.parent.parent.osnova3.biznes.buy_uchastok()
+}
+else 
+{
+alert('Отмена');
+}
+}			
+
+					}
+				}
+			}
+						
+			
+
+
+</script>
+</body>
+
+</html>
