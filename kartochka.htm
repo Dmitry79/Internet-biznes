@@ -1,0 +1,1154 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>kartochka</title>
+</head>
+
+<body>
+<!--<table>
+<tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+<tr><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+<tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+<tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+<tr><td>30</td><td>31</td><td>32</td><td>33</td><td>34</td></tr>
+<tr><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td></tr>
+</table>-->
+<script language="javascript">
+var i=0;
+var g,g1,g2,g3,g9;
+str1='Номер';
+str10='Название';
+str2='Владелец';
+str3='Гамма';
+str4='Плата';
+str6='1Ф';
+str7='2Ф';
+str8='3Ф';
+str5='Рента';
+str9='Д/Н';
+str11='1ДОМ';
+str12='2ДОМ';
+str13='3ДОМ';
+var pusto='Свободен';
+var bank='Банк'
+var newwindow;
+var fillogic=new Array()
+ fillogic[0]=new Boolean(true)
+ fillogic[1]=new Boolean(true)
+ fillogic[2]=new Boolean(true)
+ fillogic[3]=new Boolean(true)
+ fillogic[4]=new Boolean(true)
+ fillogic[5]=new Boolean(true)
+ fillogic[6]=new Boolean(true)
+ fillogic[7]=new Boolean(true)
+ fillogic[8]=new Boolean(true)
+ fillogic[9]=new Boolean(true)
+ fillogic[10]=new Boolean(true)
+ fillogic[11]=new Boolean(true)
+ fillogic[12]=new Boolean(true)
+ fillogic[13]=new Boolean(true)
+ fillogic[14]=new Boolean(true)
+ fillogic[15]=new Boolean(true)
+ fillogic[16]=new Boolean(true)
+ fillogic[17]=new Boolean(true)
+ fillogic[18]=new Boolean(true)
+ fillogic[19]=new Boolean(true)
+ fillogic[20]=new Boolean(true)
+ fillogic[21]=new Boolean(true)
+ fillogic[22]=new Boolean(true)
+ fillogic[23]=new Boolean(true)
+ fillogic[24]=new Boolean(true)
+ fillogic[25]=new Boolean(true)
+ fillogic[26]=new Boolean(true)
+ fillogic[27]=new Boolean(true)
+ fillogic[28]=new Boolean(true)
+ fillogic[29]=new Boolean(true)
+ fillogic[30]=new Boolean(true)
+ fillogic[31]=new Boolean(true)
+ fillogic[32]=new Boolean(true)
+ fillogic[33]=new Boolean(true)
+ fillogic[34]=new Boolean(true)
+ fillogic[35]=new Boolean(true)
+ fillogic[36]=new Boolean(true)
+ fillogic[37]=new Boolean(true)
+ fillogic[38]=new Boolean(true)
+ fillogic[39]=new Boolean(true)
+
+var fillogic2=new Array()
+ fillogic2[0]=new Boolean(true)
+ fillogic2[1]=new Boolean(true)
+ fillogic2[2]=new Boolean(true)
+ fillogic2[3]=new Boolean(true)
+ fillogic2[4]=new Boolean(true)
+ fillogic2[5]=new Boolean(true)
+ fillogic2[6]=new Boolean(true)
+ fillogic2[7]=new Boolean(true)
+ fillogic2[8]=new Boolean(true)
+ fillogic2[9]=new Boolean(true)
+ fillogic2[10]=new Boolean(true)
+ fillogic2[11]=new Boolean(true)
+ fillogic2[12]=new Boolean(true)
+ fillogic2[13]=new Boolean(true)
+ fillogic2[14]=new Boolean(true)
+ fillogic2[15]=new Boolean(true)
+ fillogic2[16]=new Boolean(true)
+ fillogic2[17]=new Boolean(true)
+ fillogic2[18]=new Boolean(true)
+ fillogic2[19]=new Boolean(true)
+ fillogic2[20]=new Boolean(true)
+ fillogic2[21]=new Boolean(true)
+ fillogic2[22]=new Boolean(true)
+ fillogic2[23]=new Boolean(true)
+ fillogic2[24]=new Boolean(true)
+ fillogic2[25]=new Boolean(true)
+ fillogic2[26]=new Boolean(true)
+ fillogic2[27]=new Boolean(true)
+ fillogic2[28]=new Boolean(true)
+ fillogic2[29]=new Boolean(true)
+ fillogic2[30]=new Boolean(true)
+ fillogic2[31]=new Boolean(true)
+ fillogic2[32]=new Boolean(true)
+ fillogic2[33]=new Boolean(true)
+ fillogic2[34]=new Boolean(true)
+ fillogic2[35]=new Boolean(true)
+ fillogic2[36]=new Boolean(true)
+ fillogic2[37]=new Boolean(true)
+ fillogic2[38]=new Boolean(true)
+ fillogic2[39]=new Boolean(true)
+
+var fillogic3=new Array()
+ fillogic3[0]=new Boolean(true)
+ fillogic3[1]=new Boolean(true)
+ fillogic3[2]=new Boolean(true)
+ fillogic3[3]=new Boolean(true)
+ fillogic3[4]=new Boolean(true)
+ fillogic3[5]=new Boolean(true)
+ fillogic3[6]=new Boolean(true)
+ fillogic3[7]=new Boolean(true)
+ fillogic3[8]=new Boolean(true)
+ fillogic3[9]=new Boolean(true)
+ fillogic3[10]=new Boolean(true)
+ fillogic3[11]=new Boolean(true)
+ fillogic3[12]=new Boolean(true)
+ fillogic3[13]=new Boolean(true)
+ fillogic3[14]=new Boolean(true)
+ fillogic3[15]=new Boolean(true)
+ fillogic3[16]=new Boolean(true)
+ fillogic3[17]=new Boolean(true)
+ fillogic3[18]=new Boolean(true)
+ fillogic3[19]=new Boolean(true)
+ fillogic3[20]=new Boolean(true)
+ fillogic3[21]=new Boolean(true)
+ fillogic3[22]=new Boolean(true)
+ fillogic3[23]=new Boolean(true)
+ fillogic3[24]=new Boolean(true)
+ fillogic3[25]=new Boolean(true)
+ fillogic3[26]=new Boolean(true)
+ fillogic3[27]=new Boolean(true)
+ fillogic3[28]=new Boolean(true)
+ fillogic3[29]=new Boolean(true)
+ fillogic3[30]=new Boolean(true)
+ fillogic3[31]=new Boolean(true)
+ fillogic3[32]=new Boolean(true)
+ fillogic3[33]=new Boolean(true)
+ fillogic3[34]=new Boolean(true)
+ fillogic3[35]=new Boolean(true)
+ fillogic3[36]=new Boolean(true)
+ fillogic3[37]=new Boolean(true)
+ fillogic3[38]=new Boolean(true)
+ fillogic3[39]=new Boolean(true)
+
+ var houselogic=new Array()
+ houselogic[0]=new Boolean(true)
+ houselogic[1]=new Boolean(true)
+ houselogic[2]=new Boolean(true)
+ houselogic[3]=new Boolean(true)
+ houselogic[4]=new Boolean(true)
+ houselogic[5]=new Boolean(true)
+ houselogic[6]=new Boolean(true)
+ houselogic[7]=new Boolean(true)
+ houselogic[8]=new Boolean(true)
+ houselogic[9]=new Boolean(true)
+ houselogic[10]=new Boolean(true)
+ houselogic[11]=new Boolean(true)
+ houselogic[12]=new Boolean(true)
+ houselogic[13]=new Boolean(true)
+ houselogic[14]=new Boolean(true)
+ houselogic[15]=new Boolean(true)
+ houselogic[16]=new Boolean(true)
+ houselogic[17]=new Boolean(true)
+ houselogic[18]=new Boolean(true)
+ houselogic[19]=new Boolean(true)
+ houselogic[20]=new Boolean(true)
+ houselogic[21]=new Boolean(true)
+ houselogic[22]=new Boolean(true)
+ houselogic[23]=new Boolean(true)
+ houselogic[24]=new Boolean(true)
+ houselogic[25]=new Boolean(true)
+ houselogic[26]=new Boolean(true)
+ houselogic[27]=new Boolean(true)
+ houselogic[28]=new Boolean(true)
+ houselogic[29]=new Boolean(true)
+ houselogic[30]=new Boolean(true)
+ houselogic[31]=new Boolean(true)
+ houselogic[32]=new Boolean(true)
+ houselogic[33]=new Boolean(true)
+ houselogic[34]=new Boolean(true)
+ houselogic[35]=new Boolean(true)
+ houselogic[36]=new Boolean(true)
+ houselogic[37]=new Boolean(true)
+ houselogic[38]=new Boolean(true)
+ houselogic[39]=new Boolean(true)
+
+var houselogic2=new Array()
+ houselogic2[0]=new Boolean(true)
+ houselogic2[1]=new Boolean(true)
+ houselogic2[2]=new Boolean(true)
+ houselogic2[3]=new Boolean(true)
+ houselogic2[4]=new Boolean(true)
+ houselogic2[5]=new Boolean(true)
+ houselogic2[6]=new Boolean(true)
+ houselogic2[7]=new Boolean(true)
+ houselogic2[8]=new Boolean(true)
+ houselogic2[9]=new Boolean(true)
+ houselogic2[10]=new Boolean(true)
+ houselogic2[11]=new Boolean(true)
+ houselogic2[12]=new Boolean(true)
+ houselogic2[13]=new Boolean(true)
+ houselogic2[14]=new Boolean(true)
+ houselogic2[15]=new Boolean(true)
+ houselogic2[16]=new Boolean(true)
+ houselogic2[17]=new Boolean(true)
+ houselogic2[18]=new Boolean(true)
+ houselogic2[19]=new Boolean(true)
+ houselogic2[20]=new Boolean(true)
+ houselogic2[21]=new Boolean(true)
+ houselogic2[22]=new Boolean(true)
+ houselogic2[23]=new Boolean(true)
+ houselogic2[24]=new Boolean(true)
+ houselogic2[25]=new Boolean(true)
+ houselogic2[26]=new Boolean(true)
+ houselogic2[27]=new Boolean(true)
+ houselogic2[28]=new Boolean(true)
+ houselogic2[29]=new Boolean(true)
+ houselogic2[30]=new Boolean(true)
+ houselogic2[31]=new Boolean(true)
+ houselogic2[32]=new Boolean(true)
+ houselogic2[33]=new Boolean(true)
+ houselogic2[34]=new Boolean(true)
+ houselogic2[35]=new Boolean(true)
+ houselogic2[36]=new Boolean(true)
+ houselogic2[37]=new Boolean(true)
+ houselogic2[38]=new Boolean(true)
+ houselogic2[39]=new Boolean(true)
+
+var houselogic3=new Array()
+ houselogic3[0]=new Boolean(true)
+ houselogic3[1]=new Boolean(true)
+ houselogic3[2]=new Boolean(true)
+ houselogic3[3]=new Boolean(true)
+ houselogic3[4]=new Boolean(true)
+ houselogic3[5]=new Boolean(true)
+ houselogic3[6]=new Boolean(true)
+ houselogic3[7]=new Boolean(true)
+ houselogic3[8]=new Boolean(true)
+ houselogic3[9]=new Boolean(true)
+ houselogic3[10]=new Boolean(true)
+ houselogic3[11]=new Boolean(true)
+ houselogic3[12]=new Boolean(true)
+ houselogic3[13]=new Boolean(true)
+ houselogic3[14]=new Boolean(true)
+ houselogic3[15]=new Boolean(true)
+ houselogic3[16]=new Boolean(true)
+ houselogic3[17]=new Boolean(true)
+ houselogic3[18]=new Boolean(true)
+ houselogic3[19]=new Boolean(true)
+ houselogic3[20]=new Boolean(true)
+ houselogic3[21]=new Boolean(true)
+ houselogic3[22]=new Boolean(true)
+ houselogic3[23]=new Boolean(true)
+ houselogic3[24]=new Boolean(true)
+ houselogic3[25]=new Boolean(true)
+ houselogic3[26]=new Boolean(true)
+ houselogic3[27]=new Boolean(true)
+ houselogic3[28]=new Boolean(true)
+ houselogic3[29]=new Boolean(true)
+ houselogic3[30]=new Boolean(true)
+ houselogic3[31]=new Boolean(true)
+ houselogic3[32]=new Boolean(true)
+ houselogic3[33]=new Boolean(true)
+ houselogic3[34]=new Boolean(true)
+ houselogic3[35]=new Boolean(true)
+ houselogic3[36]=new Boolean(true)
+ houselogic3[37]=new Boolean(true)
+ houselogic3[38]=new Boolean(true)
+ houselogic3[39]=new Boolean(true)
+ 
+var game=new Array()
+game[0]=bank;
+game[1]=pusto;
+game[2]=pusto;
+game[3]=bank;
+game[4]=pusto;
+game[5]=bank;
+game[6]=pusto;
+game[7]=pusto;
+game[8]=bank;
+game[9]=pusto;
+game[10]=bank;
+game[11]=pusto;
+game[12]=bank;
+game[13]=pusto;
+game[14]=pusto;
+game[15]=bank;
+game[16]=pusto;
+game[17]=pusto;
+game[18]=bank;
+game[19]=pusto;
+game[20]=bank;
+game[21]=pusto;
+game[22]=bank;
+game[23]=pusto;
+game[24]=pusto;
+game[25]=bank;
+game[26]=pusto;
+game[27]=bank;
+game[28]=pusto;
+game[29]=pusto;
+game[30]=bank;
+game[31]=pusto;
+game[32]=pusto;
+game[33]=bank;
+game[34]=pusto;
+game[35]=bank;
+game[36]=pusto;
+game[37]=bank;
+game[38]=pusto;
+game[39]=pusto;
+
+var price=new Array()
+price[0]=0;
+price[1]=10;
+price[2]=12;
+price[3]=0;
+price[4]=14;
+price[5]=0;
+price[6]=18;
+price[7]=20;
+price[8]=0;
+price[9]=22;
+price[10]=0;
+price[11]=26;
+price[12]=0;
+price[13]=28;
+price[14]=30;
+price[15]=0;
+price[16]=34;
+price[17]=36;
+price[18]=0;
+price[19]=38;
+price[20]=0;
+price[21]=42;
+price[22]=0;
+price[23]=44;
+price[24]=46;
+price[25]=0;
+price[26]=50;
+price[27]=0;
+price[28]=52;
+price[29]=54;
+price[30]=0;
+price[31]=58;
+price[32]=60;
+price[33]=0;
+price[34]=62;
+price[35]=0;
+price[36]=66;
+price[37]=0;
+price[38]=68;
+price[39]=70;
+
+var arenta=new Array()
+arenta[0]=0;
+arenta[1]=1;
+arenta[2]=1;
+arenta[3]=0;
+arenta[4]=1;
+arenta[5]=0;
+arenta[6]=2;
+arenta[7]=2;
+arenta[8]=0;
+arenta[9]=2;
+arenta[10]=0;
+arenta[11]=3;
+arenta[12]=0;
+arenta[13]=3;
+arenta[14]=3;
+arenta[15]=0;
+arenta[16]=4;
+arenta[17]=4;
+arenta[18]=0;
+arenta[19]=4;
+arenta[20]=0;
+arenta[21]=5;
+arenta[22]=0;
+arenta[23]=5;
+arenta[24]=5;
+arenta[25]=0;
+arenta[26]=6;
+arenta[27]=0;
+arenta[28]=6;
+arenta[29]=6;
+arenta[30]=0;
+arenta[31]=7;
+arenta[32]=7;
+arenta[33]=0;
+arenta[34]=7;
+arenta[35]=0;
+arenta[36]=8;
+arenta[37]=0;
+arenta[38]=8;
+arenta[39]=8;
+
+var number=new Array()
+number[0]=0;
+number[1]=1;
+number[2]=2;
+number[3]=3;
+number[4]=4;
+number[5]=5;
+number[6]=6;
+number[7]=7;
+number[8]=8;
+number[9]=9;
+number[10]=10;
+number[11]=11;
+number[12]=12;
+number[13]=13;
+number[14]=14;
+number[15]=15;
+number[16]=16;
+number[17]=17;
+number[18]=18;
+number[19]=19;
+number[20]=20;
+number[21]=21;
+number[22]=22;
+number[23]=23;
+number[24]=24;
+number[25]=25;
+number[26]=26;
+number[27]=27;
+number[28]=28;
+number[29]=29;
+number[30]=30;
+number[31]=31;
+number[32]=32;
+number[33]=33;
+number[34]=34;
+number[35]=35;
+number[36]=36;
+number[37]=37;
+number[38]=38;
+number[39]=39;
+
+var names=new Array()
+names[0]='Старт';
+names[1]='Комбинат "Новая заря"';
+names[2]='Комбинат "Салют"';
+names[3]='Прибыль';
+names[4]='Комбинат "Красная роза"';
+names[5]='Прибыль с бензина';
+names[6]='скк "Локомотив"';
+names[7]='скк "Олимпийский"';
+names[8]='Доход с драгоценностей';
+names[9]='скк "Лужники"';
+names[10]='Биржа';
+names[11]='Троллейбус, трамвай';
+names[12]='Штраф';
+names[13]='Метро';
+names[14]='Речной вокзал';
+names[15]='Сюрприз';
+names[16]='Театр опереты';
+names[17]='Театр эстрады';
+names[18]='Налог на бензин';
+names[19]='Бол. академический театр';
+names[20]='Отдых';
+names[21]='Ресторан "Прага"';
+names[22]='Рэкет: -5%';
+names[23]='Ресторан "Будапешт"';
+names[24]='Ресторан "Пекин"';
+names[25]='Прибыль с платины';
+names[26]='Гостиница "Измайлово"';
+names[27]='Налог с драгоценностей';
+names[28]='Гостиница "Националь"';
+names[29]='Гостиница "Россия"';
+names[30]='Бизнесмен';
+names[31]='Универмаг "Москва"';
+names[32]='ЦУМ';
+names[33]='Лотерея на платину';
+names[34]='ГУМ';
+names[35]='Сюрприз';
+names[36]='Завод "Серп и молот"';
+names[37]='Налог с золота';
+names[38]='Вымпел';
+names[39]='АЗЛК';
+
+var ames=new Array()
+ames[0]='start';
+ames[1]='first';
+ames[2]='first';
+ames[3]='prible';
+ames[4]='first';
+ames[5]='nalog';
+ames[6]='second';
+ames[7]='second';
+ames[8]='shans';
+ames[9]='second';
+ames[10]='exchange';
+ames[11]='third';
+ames[12]='shans';
+ames[13]='third';
+ames[14]='third';
+ames[15]='news';
+ames[16]='fouth';
+ames[17]='fouth';
+ames[18]='shans';
+ames[19]='fouth';
+ames[20]='rest';
+ames[21]='fifth';
+ames[22]='news';
+ames[23]='fifth';
+ames[24]='fifth';
+ames[25]='shans';
+ames[26]='sixth';
+ames[27]='prible';
+ames[28]='sixth';
+ames[29]='sixth';
+ames[30]='biznesmen';
+ames[31]='seventh';
+ames[32]='seventh';
+ames[33]='nalog';
+ames[34]='seventh';
+ames[35]='news';
+ames[36]='eighth';
+ames[37]='shans';
+ames[38]='eighth';
+ames[39]='eighth';
+
+
+plfil1=new Array()
+plfil1[0]=0;
+plfil1[1]=2;
+plfil1[2]=2;
+plfil1[3]=0;
+plfil1[4]=2;
+plfil1[5]=0;
+plfil1[6]=3;
+plfil1[7]=4;
+plfil1[8]=0;
+plfil1[9]=5;
+plfil1[10]=0;
+plfil1[11]=6;
+plfil1[12]=0;
+plfil1[13]=7;
+plfil1[14]=7;
+plfil1[15]=0;
+plfil1[16]=8;
+plfil1[17]=8;
+plfil1[18]=0;
+plfil1[19]=9;
+plfil1[20]=0;
+plfil1[21]=9;
+plfil1[22]=0;
+plfil1[23]=10;
+plfil1[24]=10;
+plfil1[25]=0;
+plfil1[26]=11;
+plfil1[27]=0;
+plfil1[28]=12;
+plfil1[29]=13;
+plfil1[30]=0;
+plfil1[31]=14;
+plfil1[32]=15;
+plfil1[33]=0;
+plfil1[34]=16;
+plfil1[35]=0;
+plfil1[36]=17;
+plfil1[37]=0;
+plfil1[38]=18;
+plfil1[39]=20;
+
+var plfil2=new Array()
+plfil2[0]=0;
+plfil2[1]=4;
+plfil2[2]=6;
+plfil2[3]=0;
+plfil2[4]=8;
+plfil2[5]=0;
+plfil2[6]=9;
+plfil2[7]=10;
+plfil2[8]=0;
+plfil2[9]=15;
+plfil2[10]=0;
+plfil2[11]=20;
+plfil2[12]=0;
+plfil2[13]=22;
+plfil2[14]=24;
+plfil2[15]=0;
+plfil2[16]=25;
+plfil2[17]=26;
+plfil2[18]=0;
+plfil2[19]=27;
+plfil2[20]=0;
+plfil2[21]=28;
+plfil2[22]=0;
+plfil2[23]=29;
+plfil2[24]=30;
+plfil2[25]=0;
+plfil2[26]=34;
+plfil2[27]=0;
+plfil2[28]=35;
+plfil2[29]=36;
+plfil2[30]=0;
+plfil2[31]=38;
+plfil2[32]=40;
+plfil2[33]=0;
+plfil2[34]=45;
+plfil2[35]=0;
+plfil2[36]=50;
+plfil2[37]=0;
+plfil2[38]=60;
+plfil2[39]=80;
+
+var plfil3=new Array()
+plfil3[0]=0;
+plfil3[1]=15;
+plfil3[2]=18;
+plfil3[3]=0;
+plfil3[4]=20;
+plfil3[5]=0;
+plfil3[6]=25;
+plfil3[7]=30;
+plfil3[8]=0;
+plfil3[9]=35;
+plfil3[10]=0;
+plfil3[11]=40;
+plfil3[12]=0;
+plfil3[13]=45;
+plfil3[14]=48;
+plfil3[15]=0;
+plfil3[16]=50;
+plfil3[17]=55;
+plfil3[18]=0;
+plfil3[19]=60;
+plfil3[20]=0;
+plfil3[21]=65;
+plfil3[22]=0;
+plfil3[23]=70;
+plfil3[24]=75;
+plfil3[25]=0;
+plfil3[26]=80;
+plfil3[27]=0;
+plfil3[28]=85;
+plfil3[29]=90;
+plfil3[30]=0;
+plfil3[31]=95;
+plfil3[32]=100;
+plfil3[33]=0;
+plfil3[34]=110;
+plfil3[35]=0;
+plfil3[36]=120;
+plfil3[37]=0;
+plfil3[38]=140;
+plfil3[39]=150;
+
+var plhouse1=new Array()
+plhouse1[0]=0;
+plhouse1[1]=45;
+plhouse1[2]=54;
+plhouse1[3]=0;
+plhouse1[4]=60;
+plhouse1[5]=0;
+plhouse1[6]=75;
+plhouse1[7]=90;
+plhouse1[8]=0;
+plhouse1[9]=105;
+plhouse1[10]=0;
+plhouse1[11]=120;
+plhouse1[12]=0;
+plhouse1[13]=135;
+plhouse1[14]=144;
+plhouse1[15]=0;
+plhouse1[16]=150;
+plhouse1[17]=165;
+plhouse1[18]=0;
+plhouse1[19]=180;
+plhouse1[20]=0;
+plhouse1[21]=195;
+plhouse1[22]=0;
+plhouse1[23]=210;
+plhouse1[24]=225;
+plhouse1[25]=0;
+plhouse1[26]=240;
+plhouse1[27]=0;
+plhouse1[28]=255;
+plhouse1[29]=270;
+plhouse1[30]=0;
+plhouse1[31]=285;
+plhouse1[32]=300;
+plhouse1[33]=0;
+plhouse1[34]=330;
+plhouse1[35]=0;
+plhouse1[36]=360;
+plhouse1[37]=0;
+plhouse1[38]=420;
+plhouse1[39]=450;
+
+var plhouse2=new Array()
+plhouse2[0]=0;
+plhouse2[1]=90;
+plhouse2[2]=108;
+plhouse2[3]=0;
+plhouse2[4]=120;
+plhouse2[5]=0;
+plhouse2[6]=150;
+plhouse2[7]=180;
+plhouse2[8]=0;
+plhouse2[9]=210;
+plhouse2[10]=0;
+plhouse2[11]=240;
+plhouse2[12]=0;
+plhouse2[13]=270;
+plhouse2[14]=288;
+plhouse2[15]=0;
+plhouse2[16]=300;
+plhouse2[17]=330;
+plhouse2[18]=0;
+plhouse2[19]=360;
+plhouse2[20]=0;
+plhouse2[21]=390;
+plhouse2[22]=0;
+plhouse2[23]=420;
+plhouse2[24]=450;
+plhouse2[25]=0;
+plhouse2[26]=480;
+plhouse2[27]=0;
+plhouse2[28]=510;
+plhouse2[29]=540;
+plhouse2[30]=0;
+plhouse2[31]=570;
+plhouse2[32]=600;
+plhouse2[33]=0;
+plhouse2[34]=660;
+plhouse2[35]=0;
+plhouse2[36]=720;
+plhouse2[37]=0;
+plhouse2[38]=840;
+plhouse2[39]=900;
+
+var plhouse3=new Array()
+plhouse3[0]=0;
+plhouse3[1]=180;
+plhouse3[2]=216;
+plhouse3[3]=0;
+plhouse3[4]=240;
+plhouse3[5]=0;
+plhouse3[6]=300;
+plhouse3[7]=360;
+plhouse3[8]=0;
+plhouse3[9]=420;
+plhouse3[10]=0;
+plhouse3[11]=480;
+plhouse3[12]=0;
+plhouse3[13]=540;
+plhouse3[14]=576;
+plhouse3[15]=0;
+plhouse3[16]=600;
+plhouse3[17]=660;
+plhouse3[18]=0;
+plhouse3[19]=720;
+plhouse3[20]=0;
+plhouse3[21]=780;
+plhouse3[22]=0;
+plhouse3[23]=840;
+plhouse3[24]=900;
+plhouse3[25]=0;
+plhouse3[26]=960;
+plhouse3[27]=0;
+plhouse3[28]=1020;
+plhouse3[29]=1080;
+plhouse3[30]=0;
+plhouse3[31]=1140;
+plhouse3[32]=1200;
+plhouse3[33]=0;
+plhouse3[34]=1320;
+plhouse3[35]=0;
+plhouse3[36]=1440;
+plhouse3[37]=0;
+plhouse3[38]=1680;
+plhouse3[39]=1800;
+
+var zarplata=new Array(40)
+/*zarplata[0]=0
+zarplata[1]=0
+zarplata[2]=0
+zarplata[3]=0
+zarplata[4]=0
+zarplata[5]=0
+zarplata[6]=0
+zarplata[7]=0
+zarplata[8]=0
+zarplata[9]=0
+zarplata[10]=0
+zarplata[11]=0
+zarplata[12]=0
+zarplata[13]=0
+zarplata[14]=0
+zarplata[15]=0
+zarplata[16]=0
+zarplata[17]=0
+zarplata[18]=0
+zarplata[19]=0
+zarplata[20]=0
+zarplata[21]=0
+zarplata[22]=0
+zarplata[23]=0
+zarplata[24]=0
+zarplata[25]=0
+zarplata[26]=0
+zarplata[27]=0
+zarplata[28]=0
+zarplata[29]=0
+zarplata[30]=0
+zarplata[31]=0
+zarplata[32]=0
+zarplata[33]=0
+zarplata[34]=0
+zarplata[35]=0
+zarplata[36]=0
+zarplata[37]=0
+zarplata[38]=0
+zarplata[39]=0*/
+var danet=new Array()
+danet[0]='нет';
+danet[1]='нет';
+danet[2]='нет';
+danet[3]='нет';
+danet[4]='нет';
+danet[5]='нет';
+danet[6]='нет';
+danet[7]='нет';
+danet[8]='нет';
+danet[9]='нет';
+danet[10]='нет';
+danet[11]='нет';
+danet[12]='нет';
+danet[13]='нет';
+danet[14]='нет';
+danet[15]='нет';
+danet[16]='нет';
+danet[17]='нет';
+danet[18]='нет';
+danet[19]='нет';
+danet[20]='нет';
+danet[21]='нет';
+danet[22]='нет';
+danet[23]='нет';
+danet[24]='нет';
+danet[25]='нет';
+danet[26]='нет';
+danet[27]='нет';
+danet[28]='нет';
+danet[29]='нет';
+danet[30]='нет';
+danet[31]='нет';
+danet[32]='нет';
+danet[33]='нет';
+danet[34]='нет';
+danet[35]='нет';
+danet[36]='нет';
+danet[37]='нет';
+danet[38]='нет';
+danet[39]='нет';
+
+var danet2=new Array()
+danet2[0]='нет';
+danet2[1]='нет';
+danet2[2]='нет';
+danet2[3]='нет';
+danet2[4]='нет';
+danet2[5]='нет';
+danet2[6]='нет';
+danet2[7]='нет';
+danet2[8]='нет';
+danet2[9]='нет';
+danet2[10]='нет';
+danet2[11]='нет';
+danet2[12]='нет';
+danet2[13]='нет';
+danet2[14]='нет';
+danet2[15]='нет';
+danet2[16]='нет';
+danet2[17]='нет';
+danet2[18]='нет';
+danet2[19]='нет';
+danet2[20]='нет';
+danet2[21]='нет';
+danet2[22]='нет';
+danet2[23]='нет';
+danet2[24]='нет';
+danet2[25]='нет';
+danet2[26]='нет';
+danet2[27]='нет';
+danet2[28]='нет';
+danet2[29]='нет';
+danet2[30]='нет';
+danet2[31]='нет';
+danet2[32]='нет';
+danet2[33]='нет';
+danet2[34]='нет';
+danet2[35]='нет';
+danet2[36]='нет';
+danet2[37]='нет';
+danet2[38]='нет';
+danet2[39]='нет';
+
+var danet3=new Array()
+danet3[0]='нет';
+danet3[1]='нет';
+danet3[2]='нет';
+danet3[3]='нет';
+danet3[4]='нет';
+danet3[5]='нет';
+danet3[6]='нет';
+danet3[7]='нет';
+danet3[8]='нет';
+danet3[9]='нет';
+danet3[10]='нет';
+danet3[11]='нет';
+danet3[12]='нет';
+danet3[13]='нет';
+danet3[14]='нет';
+danet3[15]='нет';
+danet3[16]='нет';
+danet3[17]='нет';
+danet3[18]='нет';
+danet3[19]='нет';
+danet3[20]='нет';
+danet3[21]='нет';
+danet3[22]='нет';
+danet3[23]='нет';
+danet3[24]='нет';
+danet3[25]='нет';
+danet3[26]='нет';
+danet3[27]='нет';
+danet3[28]='нет';
+danet3[29]='нет';
+danet3[30]='нет';
+danet3[31]='нет';
+danet3[32]='нет';
+danet3[33]='нет';
+danet3[34]='нет';
+danet3[35]='нет';
+danet3[36]='нет';
+danet3[37]='нет';
+danet3[38]='нет';
+danet3[39]='нет';
+
+//создаем общую таблицу сведений - базу данных об игроках в html-файле
+function openurl()
+{
+var newwindow = window.open('','','navigationbar=no,menubar=no,status=no,scrollbars=yes,resizeable=no'+'left=0,top=0,width=1000,height=800');
+newwindow.document.open("text/html","replace");
+newwindow.document.write('<table border="1" align="center">');
+newwindow.document.write('<tr>');
+newwindow.document.write('<td>' + str1 + '</td>');
+newwindow.document.write('<td>' + str10 + '</td>');
+newwindow.document.write('<td>' + str2 + '</td>');
+newwindow.document.write('<td>' + str3 + '</td>');
+newwindow.document.write('<td>' + str4 + '</td>');
+newwindow.document.write('<td>' + str6 + '</td>');
+newwindow.document.write('<td>' + str9 + '</td>');
+newwindow.document.write('<td>' + str7 + '</td>');
+newwindow.document.write('<td>' + str9 + '</td>');
+newwindow.document.write('<td>' + str8 + '</td>');
+newwindow.document.write('<td>' + str9 + '</td>');
+newwindow.document.write('<td>' + str11 + '</td>');
+newwindow.document.write('<td>' + str9 + '</td>');
+newwindow.document.write('<td>' + str12 + '</td>');
+newwindow.document.write('<td>' + str9 + '</td>');
+newwindow.document.write('<td>' + str13 + '</td>');
+newwindow.document.write('<td>' + str9 + '</td>');
+
+newwindow.document.write('<td>' + str5 + '</td>');
+newwindow.document.write('</tr>');
+for(g=0;g<40;g++)
+{
+
+newwindow.document.write('<tr>');
+
+newwindow.document.write('<td>'+ number[g] + '</td>');
+newwindow.document.write('<td>'+ names[g] + '</td>');
+newwindow.document.write('<td>'+ game[g] + '</td>');
+newwindow.document.write('<td>'+ ames[g] + '</td>');
+newwindow.document.write('<td>'+ arenta[g] + '</td>');
+newwindow.document.write('<td>'+ plfil1[g] + '</td>');
+if (fillogic[g]==false)
+{
+danet[g]='да';
+}
+if (fillogic[g]==true)
+{
+danet[g]='нет';
+}
+newwindow.document.write('<td>'+ danet[g] + '</td>');
+newwindow.document.write('<td>'+ plfil2[g] + '</td>');
+if (fillogic2[g]==false)
+{
+danet2[g]='да';
+}
+if (fillogic2[g]==true)
+{
+danet2[g]='нет';
+}
+
+newwindow.document.write('<td>'+ danet2[g] + '</td>');
+newwindow.document.write('<td>'+ plfil3[g] + '</td>');
+if (fillogic3[g]==false)
+{
+danet3[g]='да';
+}
+if (fillogic3[g]==true)
+{
+danet3[g]='нет';
+}
+
+newwindow.document.write('<td>'+ danet3[g] + '</td>');
+
+newwindow.document.write('<td>'+ plhouse1[g] + '</td>');
+if (houselogic[g]==false)
+{
+danet[g]='да';
+}
+if (houselogic[g]==true)
+{
+danet[g]='нет';
+}
+newwindow.document.write('<td>'+ danet[g] + '</td>');
+newwindow.document.write('<td>'+ plhouse2[g] + '</td>');
+if (houselogic2[g]==false)
+{
+danet2[g]='да';
+}
+if (houselogic2[g]==true)
+{
+danet2[g]='нет';
+}
+
+newwindow.document.write('<td>'+ danet2[g] + '</td>');
+newwindow.document.write('<td>'+ plhouse3[g] + '</td>');
+if (houselogic3[g]==false)
+{
+danet3[g]='да';
+}
+if (houselogic3[g]==true)
+{
+danet3[g]='нет';
+}
+
+newwindow.document.write('<td>'+ danet3[g] + '</td>');
+
+
+if (game[g]==pusto)
+zarplata[g]=0;
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==true)&&(fillogic2[g]==true)&&(fillogic3[g]==true)
+&&(houselogic[g]==true)&&(houselogic2[g]==true)&&(houselogic3[g]==true))
+//если условие выполняется, то заплатить ренту
+zarplata[g]=arenta[g];
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==false)&&(fillogic2[g]==true)&&(fillogic3[g]==true)
+&&(houselogic[g]==true)&&(houselogic2[g]==true)&&(houselogic3[g]==true))
+//если условие выполняется, то заплатить за 1 филиал
+
+zarplata[g]=plfil1[g];
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==false)&&(fillogic2[g]==false)&&(fillogic3[g]==true)
+&&(houselogic[g]==true)&&(houselogic2[g]==true)&&(houselogic3[g]==true))
+
+zarplata[g]=plfil2[g];
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==false)&&(fillogic2[g]==false)&&(fillogic3[g]==false)
+&&(houselogic[g]==true)&&(houselogic2[g]==true)&&(houselogic3[g]==true))
+
+zarplata[g]=plfil3[g];
+
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==false)&&(fillogic2[g]==false)&&(fillogic3[g]==false)
+&&(houselogic[g]==false)&&(houselogic2[g]==true)&&(houselogic3[g]==true))
+//если условие выполняется, то заплатить за 1 дом
+
+zarplata[g]=plhouse1[g];
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==false)&&(fillogic2[g]==false)&&(fillogic3[g]==false)
+&&(houselogic[g]==false)&&(houselogic2[g]==false)&&(houselogic3[g]==true))
+
+zarplata[g]=plhouse2[g];
+else
+{
+if (((game[g]!=pusto)||(game[g]==bank))&&(fillogic[g]==false)&&(fillogic2[g]==false)&&(fillogic3[g]==false)
+&&(houselogic[g]==false)&&(houselogic2[g]==false)&&(houselogic3[g]==false))
+
+zarplata[g]=plhouse3[g];
+}		
+}	
+}
+}		
+}	
+}
+}
+
+newwindow.document.write('<td>'+ zarplata[g]+ '</td>');
+}
+newwindow.document.write('</tr>');
+newwindow.document.write('</table>');
+newwindow.document.close()
+}
+
+document.write('<a href="#" onclick="openurl()">Информация об участках</a><br>');
+</script>
+<input type="text" id="rentauch" size="5" maxlength="5" readonly value=0>долг gamer1 сопернику<br>
+<input type="text" id="rentauch9" size="5" maxlength="5" readonly value=0>долг gamer1 банку<br>
+<input type="text" id="rentauch99" size="5" maxlength="5" readonly value=0>долг gamer2 сопернику<br>
+<input type="text" id="rentauch999" size="5" maxlength="5" readonly value=0>долг gamer2 банку<br>
+
+<hr> 
+hard comp<input type="text" id="hard" size="4" maxlength="4" readonly>
+#<input type="text" id="hard9" size="3" maxlength="3" readonly><br>
+
+railway comp<input type="text" id="railway" size="4" maxlength="4" readonly>
+#<input type="text" id="railway9" size="3" maxlength="3" readonly><br>
+
+rest comp<input type="text" id="rest" size="4" maxlength="4" readonly>
+#<input type="text" id="rest9" size="3" maxlength="3" readonly><br>
+
+serves comp<input type="text" id="serves" size="4" maxlength="4" readonly>
+#<input type="text" id="serves9" size="3" maxlength="3" readonly><br>
+
+easy comp<input type="text" id="easy" size="4" maxlength="4" readonly>
+#<input type="text" id="easy9" size="3" maxlength="3" readonly><br>
+
+</body>
+
+</html>
