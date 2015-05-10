@@ -796,8 +796,8 @@ else if((window.gold91.disabled==true)&&(window.pt91.disabled==false))
 {
 alert("ЗОЛОТО В ЛОМБАРДЕ. НАЛОГ ЗА НЕГО НЕ ПЛАТИТСЯ");
 var dragpt9=parseInt(window.pt91.value)*45;
-var ch91=parseInt((window.chet91.value),10)
-	if((parseInt((dragp9t),10))>(ch91))
+var ch91=parseInt((window.chet91.value),10);
+	if((dragpt9)>(ch91))
 	{
 window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(dragpt9,10);
 alert('Вам необходимо добыть деньги!'+'\n'+"Если у Вас был дубль-ход, то он теряет свою силу");
@@ -818,7 +818,7 @@ break;
 }
 else if((window.gold91.disabled==false)&&(window.pt91.disabled==false))
 {
-var drag=parseInt(window.gold91.value)*15+parseInt(window.pt91.value)*45;
+var drag9=parseInt(window.gold91.value)*15+parseInt(window.pt91.value)*45;
 	if((parseInt((drag9),10))>(parseInt(window.chet91.value,10)))
 	{
 window.parent.parent.osnova3.kartochka.rentauch999.value=parseInt(drag9,10);
@@ -830,7 +830,7 @@ break;
 	}
 	else
 	{
-	window.chet91.value=parseInt(window.chet91.value,10)-parseInt((drag9),10);
+	window.chet91.value=parseInt((window.chet91.value),10)-parseInt((drag9),10);
 	break;
 	}
 }
